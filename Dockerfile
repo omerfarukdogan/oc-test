@@ -11,10 +11,7 @@ LABEL com.redhat.component="jenkins-agent-maven-35-rhel7-container" \
       io.k8s.description="The jenkins agent maven image has the maven tools on top of the jenkins slave base image." \
       io.openshift.tags="openshift,jenkins,agent,maven,caglar"
 
-ENV MAVEN_VERSION=3.5 \
-    BASH_ENV=/usr/local/bin/scl_enable \
-    ENV=/usr/local/bin/scl_enable \
-    PROMPT_COMMAND=". /usr/local/bin/scl_enable"
+ENV PATH="/data1/uxbuild/apache-maven-3.0.5/bin:${PATH}"
 
 # Install Maven
 
