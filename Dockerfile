@@ -19,10 +19,12 @@ ARG PATH_ANDROID_P_TOOL="/data1/uxbuild/android-sdk-linux/platform-tools"
 ARG PATH_FORTIFY="/data1/uxbuild/fortify/bin"
 ARG PATH_PEC="/data1/uxbuild/ca/pec"
 ARG PATH_SCM="/data1/uxbuild/ca/scm/bin"
+ARG PATH_DEF_JAVA="/usr/lib/jvm/jre-1.8.0/bin/java"
+ARG PATH_JDK_JAVA="/data1/uxbuild/jdk/jdk1.8.0_152"
 
 ENV var=${var}
 
-ENV PATH="${PATH_MAVEN}:${PATH_JAVA}:${PATH_GRADLE}:${PATH_ANDROID_TOOL}:${PATH_ANDROID_P_TOOL}:${PATH_FORTIFY}:${PATH_PEC}:${PATH_SCM}:${PATH}"
+ENV PATH="${PATH_JDK_JAVA}:${PATH_MAVEN}:${PATH_JAVA}:${PATH_GRADLE}:${PATH_ANDROID_TOOL}:${PATH_ANDROID_P_TOOL}:${PATH_FORTIFY}:${PATH_PEC}:${PATH_SCM}:${PATH}"
 
 # Install Maven
 
